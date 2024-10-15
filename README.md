@@ -9,6 +9,8 @@ Project based on Deep Q-Learning architectures, the aim is to create a chess bot
 
 ### How to use it
 
+To install all the necessary library, just run in the terminal "pip install -r requirements.txt".
+
 7 different programs can be run:
 
 - TicTacToe_qlearning.ipynb is a simple notebook that does "traditional" reinforcement learning on TicTacToe, the notebook can be run and in the last block you can play against the model you trained
