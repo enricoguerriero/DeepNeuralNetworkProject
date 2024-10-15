@@ -1,0 +1,74 @@
+model:
+  run_name: "experiment_1"
+  path: "./models/model.h5"
+  name: "model"
+  load: true
+
+alpha1:
+  enabled: true
+  num_episodes: 500
+  gamma: 0.95
+  learning_rate: 0.001
+  memory_size: 5000
+  save_interval: 50
+  batch_size: 32
+
+alpha2:
+  enabled: false
+  num_episodes: 500
+  gamma: 0.95
+  learning_rate: 0.001
+  memory_size: 5000
+  save_interval: 50
+  batch_size: 32
+
+alpha3:
+  enabled: false
+  num_episodes: 500
+  gamma: 0.95
+  learning_rate: 0.001
+  memory_size: 5000
+  save_interval: 50
+  batch_size: 32
+
+alpha4:
+  enabled: true
+  pretraining:
+    doit: true
+    num_samples: 10000
+    max_depth: 3
+    stockfish_depth: 15
+    batch_size: 64
+    epochs: 10
+    validation_split: 0.1
+    learning_rate: 0.001
+  training:
+    doit: true
+    model: "./models/model.h5"
+    num_games: 1000
+    move_to_index: "path/to/move_to_index.pkl"
+    index_to_move: "path/to/index_to_move.pkl"
+
+alpha5:
+  enabled: false
+  pretraining:
+    doit: false
+    data_path: "./data/dataset.h5"
+    epochs: 10
+    batch_size: 64
+  training:
+    doit: false
+    episodes: 1000
+    batch_size: 64
+
+alpha6:
+  enabled: false
+  episodes: 1000
+  batch_size: 64
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_end: 0.01
+  epsilon_decay: 0.995
+  learning_rate: 0.001
+  memory_capacity: 10000
+  target_update: 10
