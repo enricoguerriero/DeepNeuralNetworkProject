@@ -10,6 +10,7 @@ Project based on Deep Q-Learning architectures, the aim is to create a chess bot
 ### How to use it
 
 To install all the necessary library, just run in the terminal "pip install -r requirements.txt".
+For the model with pretraining, we used the dataset of January2015 on lichess website.
 
 7 different programs can be run:
 
